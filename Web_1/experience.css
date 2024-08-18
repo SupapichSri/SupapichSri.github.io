@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 10px; 
+    flex: 0 0 auto;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+ul.menu li {
+    margin-right: auto;
+}
+
+.menu li a {
+    margin-right: auto;
+    background-color: black;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.8rem 1rem;
+}
+
+.banner {
+    background-image: url(exp2.jpg);  
+    background-size: cover;
+    color: #fff;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+/* กำหนด element ภายใน banner โดยรวม */
+.banner-info {
+    text-align: center;
+    max-width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.banner-info h1 {
+    font-size: 40px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    object-fit: cover;
+    height: 200px;
+    flex: 1 0 auto;
+}
+
+.content-items {
+    border: 1px red;
+    padding: 2rem;
+}
+
+.content-items h3{
+    text-align: center;
+}
+
+.content-items p {
+    padding-left: 2rem;
+}
+
+.content-items p1{
+    padding-left: 2rem;
+    padding-top: 3rem;
+}
+
+@media screen and (max-width : 480px) {
+    .content {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+}
